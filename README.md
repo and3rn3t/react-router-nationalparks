@@ -62,7 +62,7 @@ provided mock.
 
 ## Resources
 
-- [React Router Lesson Plan](https://git.generalassemb.ly/ga-wdi-lessons/react-router)
+- [React Router Lesson Plan](https://git.generalassemb.ly/john-deere-sei-8/react-router)
 - [`<Route render={ ... } />`](https://reacttraining.com/react-router/web/api/Route/render-func)
   vs
   [`<Route component={ ... } />`](https://reacttraining.com/react-router/web/api/Route/component)
@@ -70,7 +70,7 @@ provided mock.
 ## Plagiarism
 
 Take a moment to refamiliarize yourself with the
-[Plagiarism policy](https://git.generalassemb.ly/DC-WDI/Administrative/blob/master/plagiarism.md).
+[Plagiarism policy](https://git.generalassemb.ly/john-deere-sei-8/getting-started/blob/master/plagiarism.md).
 Plagiarized work will not be accepted.
 
 ## [License](LICENSE)
