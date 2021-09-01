@@ -4,18 +4,23 @@ class Park extends Component {
   render() {
     const id = this.props.match.params.id;
     const parkOnId = this.props.parks[id];
-    console.log(parkOnId);
     return (
       <div>
-        <h2>{parkOnId.name}</h2>
-        <p>{parkOnId.description}</p>
-        <p>
+        <a href={parkOnId.url} class="parkUrl">
+          {parkOnId.name}
+        </a>
+        <p class="address">
           {parkOnId.addresses[0].line1}
           <br></br>
           {parkOnId.addresses[0].city}, {parkOnId.addresses[0].stateCode}{" "}
           {parkOnId.addresses[0].postalCode}
         </p>
-        <p><a href={ parkOnId.directionsUrl }>Directions</a></p>
+        <p class="directions">
+          <a href={parkOnId.directionsUrl}>Directions</a>
+          <br></br>
+          {parkOnId.directionsInfo}
+        </p>
+        <p class="description">{parkOnId.description}</p>
       </div>
     );
   }
