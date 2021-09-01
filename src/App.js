@@ -7,7 +7,6 @@ import Park from "./park/Park";
 
 class App extends Component {
   render() {
-    console.log(this.props);
     return (
       <div>
         <nav>
@@ -15,13 +14,14 @@ class App extends Component {
             <h1>National Parks App</h1>
           </Link>
         </nav>
-        <Route 
+        <Route
+          exact
           path="/"
-          render={() => 
-          <ParksList 
-            parks={this.props} 
-          />
-          }
+          render={() => <ParksList parks={this.props.parks} />}
+        />
+        <Route
+          path="/park/:id"
+          render={(props) => <Park {...props} parks={this.props.parks}/>}
         />
       </div>
     );
