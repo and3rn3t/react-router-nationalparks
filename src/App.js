@@ -10,9 +10,16 @@ const apiUrl =
   "https://developer.nps.gov/api/v1/parks?api_key=YT2Ducba4XPc7pQJ7Iih7dzM7uEA8ccv17SYQizs";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      parks: [],
+    };
+  }
+
   async fetchParkInfo() {
     let results = await axios.get(apiUrl);
-    console.log(results);
+    this.setState({ parks: results.data.data });
   }
 
   async componentDidMount() {
@@ -30,11 +37,11 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => <ParksList parks={this.props.parks} />}
+          render={() => <ParksList parks={this.state.parks} />}
         />
         <Route
           path="/park/:id"
-          render={(props) => <Park {...props} parks={this.props.parks} />}
+          render={(props) => <Park {...props} parks={this.state.parks} />}
         />
       </div>
     );

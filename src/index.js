@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import App from "./App";
-import Parks from "./data/parks.json";
+// import Parks from "./data/parks.json"; parks={Parks} 
 import "./index.css";
 
 // API Key: YT2Ducba4XPc7pQJ7Iih7dzM7uEA8ccv17SYQizs
@@ -11,7 +11,7 @@ import "./index.css";
 
 ReactDOM.render(
   <Router>
-    <App parks={Parks} />
+    <App />
   </Router>,
   document.getElementById("root")
 );
