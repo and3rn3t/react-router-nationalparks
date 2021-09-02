@@ -8,18 +8,18 @@ class ParksList extends Component {
       return (
         <div key={index}>
           <Link to={"/park/" + index}>
-            <h2>{value.name}</h2>{" "}
+            <div>
+              <img src={value.images[0].url} alt={value.images[0].altText} />
+              <div>{value.name}</div>
+            </div>
           </Link>
-          <img src={value.images[0].url} alt={value.images[0].altText} />
         </div>
       );
     });
 
     return (
       <div>
-        <ul>
-          <li>{parksArray}</li>
-        </ul>
+            <div>{parksArray}</div>
       </div>
     );
   }
